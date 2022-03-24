@@ -2,18 +2,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 * body {
-font-family: 'Roboto', "sans-serif";
-font-family: 'Shrikhand', cursive;
+font-family: 'Roboto', sans-serif;
 box-sizing: border-box;
 margin: 0px;
 }
 
+:root {
+    --purple: #9356DC;
+    --pink: #FF79DA;
+    --cyan: #99E2D0;
+}
 
 /* HEADER */
 
 header {
     font-family: "Shrikhand", cursive;
     text-align: center;
-    box-shadow: 0px 2px 3px 1px rgb(190, 190, 190);
+    box-shadow: 0px 1px 6px 1px rgb(197, 196, 196);
     padding: 10px;
+    position: relative;  /* Permet de faire passer le header en 1er et affiché le box shadow */
+}
+
+/* MAIN TOP */
+
+.paris {     /* PARIS BELLEVILLE */
+    background-color: #f3f3f3;
+    display: flex;   /* flex pour alligné l'icone et le texte */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* gap entre icone et texte */
+    padding: 1px;
+    font-size: 14px;
+}
+
+/* EXPLORE */
+
+.explore {
+    text-align: center;
+}
+
+.explore h2 {
+    margin-top: 30px;
+}
+
+.explore p {
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.explore button {   /* Bouton gradient, texte, dimensions */
+    height: 45px;
+    border-radius: 20px;
+    width: 245px;
+    background-image: linear-gradient(0deg, var(--purple), var(--pink));
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: 0; 
+    box-shadow: 4px 8px 20px 3px lightgrey;
+    cursor: pointer;
+}
+
+.explore button:hover {  /* Effets sur le bouton */
+    transform: scale(1.04);
+    transition:all 500ms ease;
 }
