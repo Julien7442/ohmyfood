@@ -2,12 +2,15 @@
 
 .operation {
     counter-reset: number; /* Set a counter named 'number', and its initial value is 0. */
+    padding: 20px 10px;
+    max-width: 1280px;
+    margin: auto;
 & ol {
 display: flex;
 gap: 40px;
-@media (max-width: 838px) {
+@media (max-width: 870px) {
     flex-direction: column;
-    } /* media queries display column under 769 */
+    } /* media queries display column under 870 */
 }
 
 & li { /* Three li container */

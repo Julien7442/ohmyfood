@@ -17,6 +17,15 @@ main {
   padding: 0 10px;
 }
 
+h3 {
+  margin: 0 0 0.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -42,7 +51,7 @@ header {
 
 .explore {
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   padding-bottom: 40px;
 }
 .explore h2 {
@@ -64,7 +73,7 @@ header {
   font-size: 18px;
   font-weight: bold;
   border: 0;
-  box-shadow: 2px 4px 20px 2px #e4e3e3;
+  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.13);
   /* import from mixin.scss reusable content */
   cursor: pointer;
 }
@@ -77,13 +86,16 @@ header {
 .operation {
   counter-reset: number;
   /* Set a counter named 'number', and its initial value is 0. */
+  padding: 20px 10px;
+  max-width: 1280px;
+  margin: auto;
 }
 .operation ol {
   display: flex;
   gap: 40px;
-  /* media queries display column under 769 */
+  /* media queries display column under 870 */
 }
-@media (max-width: 838px) {
+@media (max-width: 870px) {
   .operation ol {
     flex-direction: column;
   }
@@ -92,7 +104,7 @@ header {
   /* Three li container */
   position: relative;
   background: #f6f6f6;
-  box-shadow: 2px 4px 20px 2px #e4e3e3;
+  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.13);
   padding: 20px 20px;
   list-style-type: none;
   /* removing number of li */
@@ -128,6 +140,66 @@ header {
   margin-right: 10px;
   margin-left: 5px;
   color: grey;
+}
+
+.restaurants-menu {
+  background-color: #f6f6f6;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.restaurants-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* media queries display column under 870 */
+}
+@media (max-width: 870px) {
+  .restaurants-container {
+    grid-template-columns: 1fr;
+  }
+}
+.restaurants-container .nouveau {
+  position: relative;
+}
+.restaurants-container .nouveau::before {
+  position: absolute;
+  height: 3rem;
+  width: 8rem;
+  display: grid;
+  place-items: center;
+  right: 1.5rem;
+  top: 1.5rem;
+  background-color: var(--cyan);
+  content: "Nouveau";
+  color: #34bb99;
+  font-weight: 600;
+}
+
+.card-menus {
+  border-radius: 1rem;
+  background-color: white;
+}
+.card-menus p {
+  margin: 0;
+}
+
+.card-menus img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-description {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.card-text {
+  flex: 1;
 }
 
 /* separation of concerns */
