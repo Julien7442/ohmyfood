@@ -28,7 +28,7 @@ header {
 
 .paris {
   /* PARIS BELLEVILLE */
-  background-color: #f3f3f3;
+  background-color: #f0f0f0;
   display: flex;
   /* flex pour alligné l'icone et le texte */
   text-align: center;
@@ -42,9 +42,12 @@ header {
 
 .explore {
   text-align: center;
+  background-color: #f8f8f8;
+  padding-bottom: 40px;
 }
 .explore h2 {
-  margin-top: 30px;
+  margin: 0;
+  padding-top: 20px;
 }
 .explore p {
   font-weight: 300;
@@ -61,36 +64,70 @@ header {
   font-size: 18px;
   font-weight: bold;
   border: 0;
-  box-shadow: 4px 8px 20px 3px lightgrey;
+  box-shadow: 2px 4px 20px 2px #e4e3e3;
   /* import from mixin.scss reusable content */
   cursor: pointer;
 }
 .explore button:hover {
   /* Effets sur le bouton */
-  transform: scale(1.04);
+  transform: scale(1.03);
   transition: all 400ms ease;
 }
 
+.operation {
+  counter-reset: number;
+  /* Set a counter named 'number', and its initial value is 0. */
+}
 .operation ol {
   display: flex;
-  gap: 10px;
+  gap: 40px;
+  /* media queries display column under 769 */
 }
-@media (max-width: 768px) {
+@media (max-width: 838px) {
   .operation ol {
     flex-direction: column;
   }
 }
 .operation li {
+  /* Three li container */
+  position: relative;
   background: #f6f6f6;
-  box-shadow: 4px 8px 20px 3px lightgrey;
-  padding: 10px 20px;
-  border: 1px solid red;
+  box-shadow: 2px 4px 20px 2px #e4e3e3;
+  padding: 20px 20px;
+  list-style-type: none;
+  /* removing number of li */
   flex-grow: 1;
+  /* taking entire space avalaible */
   border-radius: 15px;
+}
+.operation li::before {
+  /* creating own counter for easier manipulation */
+  counter-increment: number;
+  /* Increment the value of number counter by 1 */
+  content: counter(number);
+  position: absolute;
+  /* if absolute position is specified, parent must be relative */
+  background-color: var(--purple);
+  color: white;
+  border-radius: 25px;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  /* to place number in center. display flex align-item justify-content workaround */
+  place-items: center;
+  left: -10px;
+  bottom: 17.5px;
 }
 .operation li:hover {
   transition: all 200ms ease;
-  background: white;
+  background: #fdeffc;
+  cursor: pointer;
+}
+.operation li i {
+  /* Icon margin */
+  margin-right: 10px;
+  margin-left: 5px;
+  color: grey;
 }
 
 /* separation of concerns */

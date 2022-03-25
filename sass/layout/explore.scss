@@ -2,8 +2,11 @@
 
 .explore {
 text-align: center;
+background-color: #f8f8f8;
+padding-bottom: 40px;
 & h2 {
-    margin-top: 30px;
+    margin: 0;
+    padding-top: 20px;
 }
 
 & p {
@@ -24,7 +27,7 @@ border: 0;
 cursor: pointer;
 }
 & button:hover {  /* Effets sur le bouton */
-transform: scale(1.04);
+transform: scale(1.03);
 transition:all 400ms ease;
     }
 }

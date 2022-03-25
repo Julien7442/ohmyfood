@@ -1,24 +1,50 @@
 @use "./mixin.scss";
 
 .operation {
+    counter-reset: number; /* Set a counter named 'number', and its initial value is 0. */
 & ol {
 display: flex;
-gap: 10px;
-@media (max-width: 768px) {
+gap: 40px;
+@media (max-width: 838px) {
     flex-direction: column;
-    }
+    } /* media queries display column under 769 */
 }
-& li {
+
+& li { /* Three li container */
+    position: relative;
+    &::before { /* creating own counter for easier manipulation */
+        counter-increment: (number); /* Increment the value of number counter by 1 */
+        content: counter(number);
+        position: absolute; /* if absolute position is specified, parent must be relative */
+        background-color: var(--purple);
+        color: white;
+        border-radius: 25px;
+        width: 25px;
+        height: 25px;
+        display: grid;  /* to place number in center. display flex align-item justify-content workaround */
+        place-items: center;
+        left: -10px;
+        bottom: 17.5px;
+    }
+
 background: #f6f6f6;
 @include mixin.box-shadow-main;
-padding: 10px 20px;
-border: 1px solid red;
-flex-grow: 1;
+padding: 20px 20px;
+list-style-type: none; /* removing number of li */
+flex-grow: 1; /* taking entire space avalaible */
 border-radius: 15px;
+
 &:hover { 
     transition:all 200ms ease;
-    background: white;
+    background: rgb(253, 239, 252);
+    cursor: pointer;
         }
+
+& i { /* Icon margin */
+        margin-right: 10px;
+        margin-left: 5px;
+        color: grey;
+    }
     }
 }
 
