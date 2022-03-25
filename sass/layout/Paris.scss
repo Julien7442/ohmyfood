@@ -1,0 +1,10 @@
+.paris {     /* PARIS BELLEVILLE */
+    background-color: #f3f3f3;
+    display: flex;   /* flex pour alligné l'icone et le texte */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* gap entre icone et texte */
+    padding: 1px;
+    font-size: 14px;
+}

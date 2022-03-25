@@ -13,7 +13,10 @@
   --cyan: #99E2D0;
 }
 
-/* HEADER */
+main {
+  padding: 0 10px;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -23,7 +26,6 @@ header {
   /* Permet de faire passer le header en 1er et affiché le box shadow */
 }
 
-/* MAIN TOP */
 .paris {
   /* PARIS BELLEVILLE */
   background-color: #f3f3f3;
@@ -38,21 +40,17 @@ header {
   font-size: 14px;
 }
 
-/* EXPLORE */
 .explore {
   text-align: center;
 }
-
 .explore h2 {
   margin-top: 30px;
 }
-
 .explore p {
   font-weight: 300;
   margin-top: 30px;
   margin-bottom: 15px;
 }
-
 .explore button {
   /* Bouton gradient, texte, dimensions */
   height: 45px;
@@ -64,13 +62,37 @@ header {
   font-weight: bold;
   border: 0;
   box-shadow: 4px 8px 20px 3px lightgrey;
+  /* import from mixin.scss reusable content */
   cursor: pointer;
 }
-
 .explore button:hover {
   /* Effets sur le bouton */
   transform: scale(1.04);
-  transition: all 500ms ease;
+  transition: all 400ms ease;
 }
+
+.operation ol {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .operation ol {
+    flex-direction: column;
+  }
+}
+.operation li {
+  background: #f6f6f6;
+  box-shadow: 4px 8px 20px 3px lightgrey;
+  padding: 10px 20px;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 15px;
+}
+.operation li:hover {
+  transition: all 200ms ease;
+  background: white;
+}
+
+/* separation of concerns */
 
 /*# sourceMappingURL=style.css.map */
