@@ -12,19 +12,19 @@
 </head>
 <body>
     <header>
-        <h1>ohmyfood</h1>  <!--Grand titre-->
+        <h1>ohmyfood</h1>  <!--Title-->
     </header>
 <main>
-    <div class="paris"> <!--Paris belleville et icone-->
+    <div class="paris"> <!--Paris belleville & icon-->
         <i class="fas fa-map-marker-alt fa-lg"></i>
         <h2>Paris, Belleville</h2>
     </div>
     <section class="explore"> <!--Section explorer nos restaurants-->
-        <h2>Réservez le menu qui <br> vous convient</h2> <!--Breakpoint pour retour à la ligne-->
+        <h2>Réservez le menu qui <br> vous convient</h2> <!--Breakpoint back to lign-->
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins</p>
         <button>Explorer nos restaurants</button>
     </section>
-<section class="operation">
+<section class="operation"> <!--3 navigation buttons-->
     <h2>Fonctionnement</h2>
     <ol>
         <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
@@ -32,18 +32,21 @@
         <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
     </ol>
 </section>
-<section class="restaurants-menu">
+<section class="restaurants-menu"> <!--Card section with max-width and background color-->
     <h2>Restaurants</h2>
-    <div class="restaurants-container">
-        <a href="#" class="card-menus nouveau">
+    <div class="restaurants-container"> <!--Container of the cards display grid-->
+        <a href="#" class="card-menus nouveau"> <!--New menus and first two cards-->
             <img src="/restaurants/menu1.jpg" alt="Palette du gout">
             <div class="card-description">
-                <div class="card-text">
+                <div class="card-text"> <!--Text under the card-->
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
                  </div>
-                <i class="far fa-heart fa-2x"></i>
+                 <div class="heart-position"> <!--Placing the two earth on each other for gradient transition-->
+                <i class="far fa-heart fa-2x heart-button"></i>
+                <i class="fas fa-heart fa-2x"></i>
             </div>
+        </div>
         </a>
         <a href="#" class="card-menus nouveau">
             <img src="/restaurants/menu2.jpg" alt="note enchantée">
@@ -52,7 +55,10 @@
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
                 </div>
-                <i class="far fa-heart fa-2x"></i>
+                <div class="heart-position">
+                <i class="far fa-heart fa-2x heart-button"></i>
+                <i class="fas fa-heart fa-2x"></i>
+            </div>
             </div>
         </a>
         <a href="#" class="card-menus">
@@ -62,8 +68,11 @@
                     <h3>A la française</h3>
                     <p>Cité rouge</p>
                 </div>
-                <i class="far fa-heart fa-2x"></i>
+                <div class="heart-position">
+                <i class="far fa-heart fa-2x heart-button"></i>
+                <i class="fas fa-heart fa-2x"></i>
             </div>
+        </div>
         </a>
         <a href="#" class="card-menus">
             <img src="/restaurants/menu4.jpg" alt="délice des sens">
@@ -72,7 +81,10 @@
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                 </div>
+                <div class="heart-position">
                 <i class="far fa-heart fa-2x heart-button"></i>
+                <i class="fas fa-heart fa-2x"></i>
+            </div>
             </div>
         </a>
     </div>

@@ -1,3 +1,5 @@
+@use "../mixin.scss";
+
 .restaurants-menu {
     background-color: #f6f6f6;
     max-width: 1280px;
@@ -55,12 +57,34 @@
     padding: 1rem;
     display: flex;
     align-items: center;
+    position: relative;
+    & .fas { /* Hearth solid with gradient but opacity 0 */
+        color: transparent;
+        @include mixin.gradient-purple-pink;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover .fas { /* displaying heart opacity 1 */
+        opacity: 1;
+    }
+    &:hover .far { /* regular hearth disappear opacity 0 */
+        opacity: 0;
+    }
 }
 
 .card-text {
     flex: 1;
 }
 
+.heart-position { /* Placing the two earth in one square flexblox on each other => parent must be relative in case of absolute use */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .heart-button {
- color: black;
+ position: absolute;
 }

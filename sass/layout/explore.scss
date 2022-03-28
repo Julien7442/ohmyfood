@@ -18,7 +18,7 @@ margin-bottom: 15px;
 height: 45px;
 border-radius: 20px;
 width: 245px;
-background-image: linear-gradient(0deg, var(--purple), var(--pink));
+@include mixin.gradient-purple-pink;
 color: white;
 font-size: 18px;
 font-weight: bold;
