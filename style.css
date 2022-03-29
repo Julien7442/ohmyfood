@@ -17,8 +17,11 @@ main {
   padding: 0 10px;
 }
 
-h3 {
-  margin: 0 0 0.25rem;
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 a {
@@ -45,14 +48,14 @@ header {
   justify-content: center;
   gap: 10px;
   /* gap entre icone et texte */
-  padding: 1px;
+  padding: 15px;
   font-size: 14px;
 }
 
 .explore {
   text-align: center;
   background-color: #f6f6f6;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .explore h2 {
   margin: 0;
@@ -65,20 +68,25 @@ header {
 }
 .explore button {
   /* Bouton gradient, texte, dimensions */
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   height: 45px;
   border-radius: 20px;
-  width: 245px;
+  width: 220px;
   background-image: linear-gradient(0deg, var(--purple), var(--pink));
   color: white;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
   border: 0;
-  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.13);
-  /* import from mixin.scss reusable content */
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .explore button:hover {
-  /* Effets sur le bouton */
   transform: scale(1.03);
   transition: all 400ms ease;
 }
@@ -104,7 +112,7 @@ header {
   /* Three li container */
   position: relative;
   background: #f6f6f6;
-  box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.13);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   padding: 20px 20px;
   list-style-type: none;
   /* removing number of li */
@@ -131,9 +139,10 @@ header {
   bottom: 17.5px;
 }
 .operation li:hover {
-  transition: all 200ms ease;
+  transition: all 400ms ease;
   background: #fdeffc;
   cursor: pointer;
+  transform: scale(1.02);
 }
 .operation li i {
   /* Icon margin */
@@ -144,11 +153,14 @@ header {
 
 .restaurants-menu {
   background-color: #f6f6f6;
-  max-width: 1280px;
   margin: auto;
 }
 
 .restaurants-container {
+  max-width: 1280px;
+  margin: auto;
+}
+.restaurants-container .cards-grid-template {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -156,11 +168,11 @@ header {
   /* media queries display column under 870 */
 }
 @media (max-width: 870px) {
-  .restaurants-container {
+  .restaurants-container .cards-grid-template {
     grid-template-columns: 1fr;
   }
 }
-.restaurants-container .nouveau {
+.restaurants-container .cards-grid-template .nouveau {
   position: relative;
 }
 .restaurants-container .nouveau::before {
@@ -278,6 +290,226 @@ footer i {
     padding-left: 3rem;
     display: inline-block;
   }
+}
+
+@keyframes bloc-appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+#page-restaurant h1 {
+  position: relative;
+}
+#page-restaurant h2 {
+  font-family: "Shrikhand", "sans-serif";
+}
+#page-restaurant h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin: 1.5rem 0 1.5rem;
+}
+#page-restaurant h3::after {
+  content: "";
+  height: 0.25rem;
+  width: 1.25rem;
+  background-color: var(--cyan);
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 3rem;
+}
+#page-restaurant header::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  position: absolute;
+  font-size: 20px;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  /* align center */
+}
+
+.page-restaurant-img {
+  width: 100%;
+  max-height: 40rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: auto;
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: -6rem;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.title-hearth-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.page-hearth .fas {
+  /* Hearth solid with gradient but opacity 0 */
+  color: transparent;
+  background-image: linear-gradient(0deg, var(--purple), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.page-hearth:hover .fas {
+  /* displaying heart opacity 1 */
+  opacity: 1;
+}
+.page-hearth:hover .far {
+  /* regular hearth disappear opacity 0 */
+  opacity: 0;
+}
+
+.grid-menus {
+  display: grid;
+}
+
+.category-menu {
+  overflow: hidden;
+}
+.category-menu .menus-display {
+  /* Loop child of "i" inside category-display inside category menu */
+  /* Loop child of "i" inside category-display inside category menu */
+  /* Loop child of "i" inside category-display inside category menu */
+  display: flex;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  background-color: white;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* hidding checkmark */
+  cursor: pointer;
+  animation: bloc-appear 1s;
+  /* from mixin.scss */
+  animation-fill-mode: both;
+}
+.category-menu .menus-display:nth-child(1) {
+  /* Selecting all child, from 1 through 3 only */
+  animation-delay: 100ms;
+  /* apparition of each delay increase by 100 */
+}
+.category-menu .menus-display:nth-child(2) {
+  /* Selecting all child, from 1 through 3 only */
+  animation-delay: 200ms;
+  /* apparition of each delay increase by 100 */
+}
+.category-menu .menus-display:nth-child(3) {
+  /* Selecting all child, from 1 through 3 only */
+  animation-delay: 300ms;
+  /* apparition of each delay increase by 100 */
+}
+.category-menu .menus-display:hover .menus-checkmark {
+  margin-right: 0;
+}
+.category-menu .menus-display:hover .menus-checkmark i {
+  /* Checkmark spinning animation */
+  animation: mark-spin 0.5s ease-in-out;
+}
+@keyframes mark-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.category-menu .menus-display .price {
+  margin-left: auto;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+}
+
+.display-menus-description {
+  padding: 1rem;
+  overflow: hidden;
+  /* hidding checkmark */
+}
+.display-menus-description h4, .display-menus-description p {
+  white-space: nowrap;
+  /* dont wrap text */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* hidding checkmark */
+}
+
+.menus-checkmark {
+  display: grid;
+  place-items: center;
+  background-color: var(--cyan);
+  margin-right: -4rem;
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: margin-right 0.5s;
+  flex-shrink: 0;
+  /* Avoid resizing checkmark */
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+.menus-checkmark i {
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  background: white;
+  aspect-ratio: 1;
+  /* width = height */
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.order {
+  height: 15vh;
+  /* Viewport height */
+  display: grid;
+  place-items: center;
+}
+.order button {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  height: 45px;
+  border-radius: 20px;
+  width: 220px;
+  background-image: linear-gradient(0deg, var(--purple), var(--pink));
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.order button:hover {
+  transform: scale(1.03);
+  transition: all 400ms ease;
 }
 
 /* separation of concerns */

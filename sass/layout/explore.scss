@@ -1,33 +1,20 @@
 @use "../mixin.scss";
 
 .explore {
-text-align: center;
-background-color: #f6f6f6;
-padding-bottom: 40px;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding-bottom: 20px;
 & h2 {
     margin: 0;
     padding-top: 20px;
 }
 
 & p {
-font-weight: 300;
-margin-top: 30px;
-margin-bottom: 15px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 & button {   /* Bouton gradient, texte, dimensions */
-height: 45px;
-border-radius: 20px;
-width: 245px;
-@include mixin.gradient-purple-pink;
-color: white;
-font-size: 18px;
-font-weight: bold;
-border: 0; 
-@include mixin.box-shadow-main; /* import from mixin.scss reusable content */
-cursor: pointer;
+    @include mixin.button-gradient;
 }
-& button:hover {  /* Effets sur le bouton */
-transform: scale(1.03);
-transition:all 400ms ease;
-    }
-}
+}   

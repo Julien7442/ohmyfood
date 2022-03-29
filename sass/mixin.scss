@@ -1,7 +1,35 @@
 @mixin box-shadow-main {
-    box-shadow: 2.5px 2.5px 5px rgb(0 0 0 / 13%);
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
 }
 
 @mixin gradient-purple-pink {
     background-image: linear-gradient(0deg, var(--purple), var(--pink));
+}
+
+@mixin font-awesome-icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+}
+
+@mixin button-gradient {
+    @include font-awesome-icon;
+    height: 45px;
+    border-radius: 20px;
+    width: 220px;
+    @include gradient-purple-pink;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: 0; 
+    @include box-shadow-main;
+    cursor: pointer;
+&:hover {
+    transform: scale(1.03);
+    transition:all 400ms ease;
+    }  
 }

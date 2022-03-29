@@ -1,4 +1,4 @@
-@use "./mixin.scss";
+@use "../mixin.scss";
 
 .operation {
     counter-reset: number; /* Set a counter named 'number', and its initial value is 0. */
@@ -38,9 +38,10 @@ flex-grow: 1; /* taking entire space avalaible */
 border-radius: 15px;
 
 &:hover { 
-    transition:all 200ms ease;
+    transition:all 400ms ease;
     background: rgb(253, 239, 252);
     cursor: pointer;
+    transform: scale(1.02);
         }
 
 & i { /* Icon margin */
