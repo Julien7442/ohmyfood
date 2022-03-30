@@ -60,6 +60,7 @@
 }
 
 .page-hearth {
+    cursor: pointer;
 & .fas { /* Hearth solid with gradient but opacity 0 */
     color: transparent;
     @include mixin.gradient-purple-pink;
