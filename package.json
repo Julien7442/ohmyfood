@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/Julien7442/ohmyfood/issues"
   },
-  "homepage": "https://github.com/Julien7442/ohmyfood#readme",
+  "homepage": "https://julien7442.github.io/ohmyfood/",
   "dependencies": {
     "autoprefixer": "^10.4.4",
     "sass": "^1.49.9"
