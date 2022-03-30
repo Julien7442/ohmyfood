@@ -1,9 +1,7 @@
 ---
-
 # ohmyfood
 
 Third project of OpenClassrooms formation.
-
 ---
 
 Used in this project :
