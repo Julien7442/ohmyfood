@@ -1,5 +1,5 @@
-@use "../mixin";
-@use "../animations/all-animations";
+@use "../../sass/mixin";
+@use "../../sass/animations/all-animations";
 
 #page-restaurant {
     & h1 {
@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 2rem 2rem 2rem 1rem;
+    padding: 1rem 2rem 1rem 1rem;
 }
 
 .page-hearth {

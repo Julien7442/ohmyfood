@@ -43,6 +43,9 @@ border-radius: 15px;
     background: rgb(253, 239, 252);
     cursor: pointer;
     transform: scale(1.02);
+    i::before {
+        color: var(--purple);
+    }
         }
 
 & i { /* Icon margin */
