@@ -56,8 +56,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    cursor: pointer;
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 2rem 2rem 2rem 1rem;
 }
 
 .page-hearth {
@@ -83,9 +82,8 @@
 
 .category-menu {
     overflow: hidden;
+    padding: 0 1rem;
 
-    
-    
     .menus-display {
     @for $i from 1 through 3 { /* Loop child of "i" inside category-display inside category menu */
         &:nth-child(#{$i}) { /* Selecting all child, from 1 through 3 only */
@@ -141,12 +139,13 @@
     flex-shrink: 0; /* Avoid resizing checkmark */
     @include mixin.box-shadow-main;
     i {
+        $sizecheck: 2rem;
         display: grid;
         place-items: center;
         color: var(--cyan);
         background: white;
-        aspect-ratio: 1; /* width = height */
-        width: 2rem;
+        height: $sizecheck; /* width = height */
+        width: $sizecheck;
         border-radius: 50%;
     }
 }
@@ -157,6 +156,7 @@
     place-items: center;
 button {
     @include mixin.button-gradient;
+    font-size: 22px;
     }
 }
 

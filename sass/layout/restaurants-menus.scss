@@ -22,15 +22,15 @@
 }
     .nouveau::before {
         position: absolute;
-        height: 3rem;
-        width: 8rem;
+        height: 2.5rem;
+        width: 5rem;
         display: grid;
         place-items: center;
         right: 1.5rem;
         top: 1.5rem;
         background-color: var(--cyan);
         content: "Nouveau";
-        color: #34bb99;
+        color: #239761;
         font-weight: 600;
     }
 }
@@ -90,4 +90,5 @@
 
 .heart-button {
  position: absolute;
+ cursor: pointer;
 }
