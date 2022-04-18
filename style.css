@@ -8,9 +8,9 @@
 }
 
 :root {
-  --purple: #9356DC;
-  --pink: #FF79DA;
-  --cyan: #99E2D0;
+  --purple: #9356dc;
+  --pink: #ff79da;
+  --cyan: #99e2d0;
 }
 
 h1,
@@ -33,6 +33,7 @@ header {
   padding: 10px;
   position: relative;
   /* Permet de faire passer le header en 1er et affiché le box shadow */
+  font-size: 18px;
 }
 
 .paris {
@@ -43,11 +44,15 @@ header {
   text-align: center;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   /* gap entre icone et texte */
   padding: 15px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
+  color: #4a4a4a;
+}
+.paris .fas {
+  transform: scale(1.2, 1.2);
 }
 
 .explore {
@@ -178,6 +183,10 @@ header {
 }
 .restaurants-container .cards-grid-template .nouveau {
   position: relative;
+}
+.restaurants-container .cards-grid-template .far,
+.restaurants-container .cards-grid-template .fas {
+  transform: scale(0.9, 1);
 }
 .restaurants-container .nouveau::before {
   position: absolute;
@@ -371,7 +380,7 @@ footer i {
   font-weight: 300;
   position: relative;
   margin: 1.5rem 0 1.5rem;
-  font-size: 24px;
+  font-size: 20px;
 }
 #page-restaurant h3::after {
   content: "";
@@ -379,9 +388,9 @@ footer i {
   width: 1.25rem;
   background-color: var(--cyan);
   position: absolute;
-  top: 2rem;
+  top: 1.8rem;
   left: 0;
-  width: 3.8rem;
+  width: 3rem;
 }
 #page-restaurant header::before {
   display: inline-block;
@@ -398,6 +407,10 @@ footer i {
   top: 50%;
   transform: translateY(-50%);
   /* align center */
+}
+#page-restaurant .far,
+#page-restaurant .fas {
+  transform: scale(0.9, 1);
 }
 
 .page-restaurant-img {
@@ -514,7 +527,8 @@ footer i {
   overflow: hidden;
   /* hidding checkmark */
 }
-.display-menus-description h4, .display-menus-description p {
+.display-menus-description h4,
+.display-menus-description p {
   white-space: nowrap;
   /* dont wrap text */
   text-overflow: ellipsis;

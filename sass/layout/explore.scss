@@ -4,21 +4,19 @@
     text-align: center;
     background-color: #f6f6f6;
     padding-bottom: 50px;
-& h2 {
-    margin: 0;
-    padding-top: 30px;
-}
+    & h2 {
+        margin: 0;
+        padding-top: 30px;
+    }
 
-& p {
-    font-weight: 300;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 18px;
+    & p {
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    & button {
+        /* Bouton gradient, texte, dimensions */
+        @include mixin.button-gradient;
+    }
 }
-& button {   /* Bouton gradient, texte, dimensions */
-    @include mixin.button-gradient;
-}
-}
-
-
-

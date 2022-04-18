@@ -14,11 +14,11 @@ footer h2 {
 footer p {
     font-size: 18px;
     margin: 0.5rem 0;
-    &:hover { 
+    &:hover {
         transform: scale(1.01);
         cursor: pointer;
-        transition:all 200ms ease;
-            }
+        transition: all 200ms ease;
+    }
 }
 
 footer i {

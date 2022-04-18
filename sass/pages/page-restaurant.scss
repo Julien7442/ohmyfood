@@ -3,38 +3,42 @@
 
 #page-restaurant {
     & h1 {
-    position: relative;
+        position: relative;
     }
     & h2 {
-    font-family: "Shrikhand", "sans-serif";
-    font-size: 36px;
-    font-weight: 400;
+        font-family: "Shrikhand", "sans-serif";
+        font-size: 36px;
+        font-weight: 400;
     }
     & h3 {
         text-transform: uppercase;
         font-weight: 300;
         position: relative;
         margin: 1.5rem 0 1.5rem;
-        font-size: 24px;
+        font-size: 20px;
         &::after {
             content: "";
             height: 0.25rem;
             width: 1.25rem;
             background-color: var(--cyan);
             position: absolute;
-            top: 2rem;
+            top: 1.8rem;
             left: 0;
-            width: 3.8rem;
+            width: 3rem;
         }
     }
     header::before {
-    @include mixin.font-awesome-icon;
-    content: "\f060";
-    position: absolute;
-    font-size: 20px;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%); /* align center */
+        @include mixin.font-awesome-icon;
+        content: "\f060";
+        position: absolute;
+        font-size: 20px;
+        left: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%); /* align center */
+    }
+    .far,
+    .fas {
+        transform: scale(0.9, 1);
     }
 }
 
@@ -64,69 +68,76 @@
 
 .page-hearth {
     cursor: pointer;
-& .fas { /* Hearth solid with gradient but opacity 0 */
-    color: transparent;
-    @include mixin.gradient-purple-pink;
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-}
-&:hover .fas { /* displaying heart opacity 1 */
-    opacity: 1;
-}
-&:hover .far { /* regular hearth disappear opacity 0 */
-    opacity: 0;
-}
+    & .fas {
+        /* Hearth solid with gradient but opacity 0 */
+        color: transparent;
+        @include mixin.gradient-purple-pink;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover .fas {
+        /* displaying heart opacity 1 */
+        opacity: 1;
+    }
+    &:hover .far {
+        /* regular hearth disappear opacity 0 */
+        opacity: 0;
+    }
 }
 
 .grid-menus {
     display: grid;
-    }
+}
 
 .category-menu {
     overflow: hidden;
     padding: 0 1rem;
 
     .menus-display {
-    @for $i from 1 through 3 { /* Loop child of "i" inside category-display inside category menu */
-        &:nth-child(#{$i}) { /* Selecting all child, from 1 through 3 only */
-            animation-delay: 100ms * $i; /* apparition of each delay increase by 100 */
-        }
-    }
-    display: flex;
-    border-radius: 1rem;
-    margin: 0.5rem;
-    background-color: white;
-    margin: 1rem 0;
-    @include mixin.box-shadow-main;
-    overflow: hidden; /* hidding checkmark */
-    cursor: pointer;
-    animation: bloc-appear 1s; /* from mixin.scss */
-    animation-fill-mode: both;
-&:hover .menus-checkmark {
-    margin-right: 0;
-    i { /* Checkmark spinning animation */
-    @include all-animations.mark-spin;
-    animation: mark-spin 0.5s ease-in-out;
-    }
-}
-.price {
-    margin-left: auto;
-    font-weight: 900;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
-    font-size: 20px;
-                }
+        @for $i from 1 through 3 {
+            /* Loop child of "i" inside category-display inside category menu */
+            &:nth-child(#{$i}) {
+                /* Selecting all child, from 1 through 3 only */
+                animation-delay: 100ms *
+                    $i; /* apparition of each delay increase by 100 */
             }
         }
-
+        display: flex;
+        border-radius: 1rem;
+        margin: 0.5rem;
+        background-color: white;
+        margin: 1rem 0;
+        @include mixin.box-shadow-main;
+        overflow: hidden; /* hidding checkmark */
+        cursor: pointer;
+        animation: bloc-appear 1s; /* from mixin.scss */
+        animation-fill-mode: both;
+        &:hover .menus-checkmark {
+            margin-right: 0;
+            i {
+                /* Checkmark spinning animation */
+                @include all-animations.mark-spin;
+                animation: mark-spin 0.5s ease-in-out;
+            }
+        }
+        .price {
+            margin-left: auto;
+            font-weight: 900;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+            font-size: 20px;
+        }
+    }
+}
 
 .display-menus-description {
     padding: 1rem;
     overflow: hidden; /* hidding checkmark */
-    h4,p {
+    h4,
+    p {
         white-space: nowrap; /* dont wrap text */
         text-overflow: ellipsis;
         overflow: hidden; /* hidding checkmark */
@@ -166,8 +177,8 @@
     display: grid;
     place-items: center;
     padding-bottom: 4rem;
-button {
-    @include mixin.button-commander;
+    button {
+        @include mixin.button-commander;
     }
 }
 
@@ -176,4 +187,3 @@ button {
     font-family: "Shrikhand", "sans-serif";
     font-weight: 400;
 }
-

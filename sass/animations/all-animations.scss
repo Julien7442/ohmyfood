@@ -6,7 +6,7 @@
         100% {
             transform: rotate(0);
         }
-    }  
+    }
 }
 
 @keyframes bloc-appear {
@@ -68,7 +68,7 @@
 }
 
 @keyframes spinning {
-    to  {
+    to {
         transform: rotate(360deg);
     }
 }
