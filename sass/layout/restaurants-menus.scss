@@ -9,8 +9,9 @@
 .restaurants-container {
     max-width: 1280px;
     margin: auto;
+    width: 90%;
     & h2 {
-        margin: 1.5rem 0 1rem 0;
+        margin: 2.5rem 0 1.5rem 0;
     }
     & .cards-grid-template {
     display: grid;
@@ -26,15 +27,15 @@
 }
     .nouveau::before {
         position: absolute;
-        height: 2.5rem;
-        width: 5rem;
+        height: 2rem;
+        width: 6rem;
         display: grid;
         place-items: center;
-        right: 1.5rem;
-        top: 1.5rem;
+        right: 1rem;
+        top: 1rem;
         background-color: var(--cyan);
         content: "Nouveau";
-        color: #239761;
+        color: #1b8252;
         font-weight: 600;
     }
 }
@@ -42,6 +43,7 @@
 .card-menus {
     border-radius: 1rem;
     background-color: white;
+    @include mixin.box-shadow-main;
     & p {
         margin: 0;
     }
@@ -70,6 +72,7 @@
 
 .card-text {
     flex: 1;
+    font-size: 18px;
 }
 
 .heart-position { /* Placing the two earth in one square flexblox on each other => parent must be relative in case of absolute use */

@@ -2,13 +2,16 @@
 
 .operation {
     counter-reset: number; /* Set a counter named 'number', and its initial value is 0. */
-    padding: 20px 10px;
+    padding: 3rem 0;
     max-width: 1280px;
     margin: auto;
+    width: 90%;
 & ol {
 display: flex;
 gap: 40px;
-padding: 10px;
+padding: 0 10px;
+font-weight: bold;
+font-size: 18px;
 @media (max-width: 870px) {
     flex-direction: column;
     } /* media queries display column under 870 */
@@ -16,6 +19,12 @@ padding: 10px;
 
 & li { /* Three li container */
     position: relative;
+    background: #f6f6f6;
+    @include mixin.box-shadow-main;
+    padding: 25px 20px;
+    list-style-type: none; /* removing number of li */
+    flex-grow: 1; /* taking entire space avalaible */
+    border-radius: 15px;
     &::before { /* creating own counter for easier manipulation */
         counter-increment: (number); /* Increment the value of number counter by 1 */
         content: counter(number);
@@ -28,15 +37,9 @@ padding: 10px;
         display: grid;  /* to place number in center. display flex align-item justify-content workaround */
         place-items: center;
         left: -10px;
-        bottom: 17.5px;
+        bottom: 25px;
     }
 
-background: #f6f6f6;
-@include mixin.box-shadow-main;
-padding: 20px 20px;
-list-style-type: none; /* removing number of li */
-flex-grow: 1; /* taking entire space avalaible */
-border-radius: 15px;
 
 &:hover { 
     transition:all 400ms ease;
@@ -49,8 +52,8 @@ border-radius: 15px;
         }
 
 & i { /* Icon margin */
-        margin-right: 10px;
-        margin-left: 5px;
+        margin-right: 1.8rem;
+        margin-left: 1.8rem;
         color: grey;
     }
     }

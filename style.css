@@ -13,10 +13,7 @@
   --cyan: #99E2D0;
 }
 
-main {
-  padding: 0 10px;
-}
-
+h1,
 h2,
 h3,
 h4,
@@ -49,41 +46,36 @@ header {
   gap: 10px;
   /* gap entre icone et texte */
   padding: 15px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .explore {
   text-align: center;
   background-color: #f6f6f6;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 .explore h2 {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .explore p {
   font-weight: 300;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 .explore button {
   /* Bouton gradient, texte, dimensions */
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  height: 45px;
-  border-radius: 20px;
-  width: 220px;
+  height: 55px;
+  border-radius: 30px;
+  width: 230px;
   background-image: linear-gradient(0deg, var(--purple), var(--pink));
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   border: 0;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .explore button:hover {
@@ -94,14 +86,17 @@ header {
 .operation {
   counter-reset: number;
   /* Set a counter named 'number', and its initial value is 0. */
-  padding: 20px 10px;
+  padding: 3rem 0;
   max-width: 1280px;
   margin: auto;
+  width: 90%;
 }
 .operation ol {
   display: flex;
   gap: 40px;
-  padding: 10px;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 18px;
   /* media queries display column under 870 */
 }
 @media (max-width: 870px) {
@@ -113,8 +108,8 @@ header {
   /* Three li container */
   position: relative;
   background: #f6f6f6;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 20px 20px;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 25px 20px;
   list-style-type: none;
   /* removing number of li */
   flex-grow: 1;
@@ -137,7 +132,7 @@ header {
   /* to place number in center. display flex align-item justify-content workaround */
   place-items: center;
   left: -10px;
-  bottom: 17.5px;
+  bottom: 25px;
 }
 .operation li:hover {
   transition: all 400ms ease;
@@ -150,8 +145,8 @@ header {
 }
 .operation li i {
   /* Icon margin */
-  margin-right: 10px;
-  margin-left: 5px;
+  margin-right: 1.8rem;
+  margin-left: 1.8rem;
   color: grey;
 }
 
@@ -164,9 +159,10 @@ header {
 .restaurants-container {
   max-width: 1280px;
   margin: auto;
+  width: 90%;
 }
 .restaurants-container h2 {
-  margin: 1.5rem 0 1rem 0;
+  margin: 2.5rem 0 1.5rem 0;
 }
 .restaurants-container .cards-grid-template {
   display: grid;
@@ -185,21 +181,22 @@ header {
 }
 .restaurants-container .nouveau::before {
   position: absolute;
-  height: 2.5rem;
-  width: 5rem;
+  height: 2rem;
+  width: 6rem;
   display: grid;
   place-items: center;
-  right: 1.5rem;
-  top: 1.5rem;
+  right: 1rem;
+  top: 1rem;
   background-color: var(--cyan);
   content: "Nouveau";
-  color: #239761;
+  color: #1b8252;
   font-weight: 600;
 }
 
 .card-menus {
   border-radius: 1rem;
   background-color: white;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 .card-menus p {
   margin: 0;
@@ -227,6 +224,7 @@ header {
 
 .card-text {
   flex: 1;
+  font-size: 18px;
 }
 
 .heart-position {
@@ -260,7 +258,6 @@ header {
 
 footer {
   background-color: #353535;
-  padding: 0.2rem 0;
   align-items: center;
   color: white;
 }
@@ -268,12 +265,13 @@ footer {
 footer h2 {
   font-family: "Shrikhand", cursive;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
 }
 
 footer p {
-  font-size: 15px;
-  margin: 1rem 0;
+  font-size: 18px;
+  margin: 0.5rem 0;
 }
 footer p:hover {
   transform: scale(1.01);
@@ -288,7 +286,7 @@ footer i {
 .footer-text {
   max-width: 1280px;
   margin: auto;
-  padding: 1rem;
+  padding: 2rem 0;
   /* media queries display column under 870 */
 }
 @media (max-width: 870px) {
@@ -365,12 +363,15 @@ footer i {
 }
 #page-restaurant h2 {
   font-family: "Shrikhand", "sans-serif";
+  font-size: 36px;
+  font-weight: 400;
 }
 #page-restaurant h3 {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
   margin: 1.5rem 0 1.5rem;
+  font-size: 24px;
 }
 #page-restaurant h3::after {
   content: "";
@@ -378,9 +379,9 @@ footer i {
   width: 1.25rem;
   background-color: var(--cyan);
   position: absolute;
-  top: 1.5rem;
+  top: 2rem;
   left: 0;
-  width: 3rem;
+  width: 3.8rem;
 }
 #page-restaurant header::before {
   display: inline-block;
@@ -393,7 +394,7 @@ footer i {
   content: "\f060";
   position: absolute;
   font-size: 20px;
-  left: 1rem;
+  left: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
   /* align center */
@@ -411,7 +412,7 @@ footer i {
   margin: auto;
   background-color: #f6f6f6;
   position: relative;
-  margin-top: -6rem;
+  margin-top: -4rem;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -420,7 +421,7 @@ footer i {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 1rem 2rem 1rem 1rem;
+  padding: 2rem 3rem 0 1rem;
 }
 
 .page-hearth {
@@ -461,7 +462,7 @@ footer i {
   margin: 0.5rem;
   background-color: white;
   margin: 1rem 0;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   /* hidding checkmark */
   cursor: pointer;
@@ -505,6 +506,7 @@ footer i {
   display: flex;
   align-items: flex-end;
   padding: 1rem;
+  font-size: 20px;
 }
 
 .display-menus-description {
@@ -519,6 +521,12 @@ footer i {
   overflow: hidden;
   /* hidding checkmark */
 }
+.display-menus-description p {
+  font-size: 18px;
+}
+.display-menus-description h4 {
+  font-size: 22px;
+}
 
 .menus-checkmark {
   display: grid;
@@ -530,7 +538,7 @@ footer i {
   transition: margin-right 0.5s;
   flex-shrink: 0;
   /* Avoid resizing checkmark */
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 .menus-checkmark i {
   display: grid;
@@ -548,30 +556,29 @@ footer i {
   /* Viewport height */
   display: grid;
   place-items: center;
+  padding-bottom: 4rem;
 }
 .order button {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  height: 45px;
-  border-radius: 20px;
-  width: 220px;
+  height: 60px;
+  border-radius: 30px;
+  width: 230px;
   background-image: linear-gradient(0deg, var(--purple), var(--pink));
   color: white;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   border: 0;
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  font-size: 22px;
 }
 .order button:hover {
   transform: scale(1.03);
   transition: all 400ms ease;
+}
+
+.footer-text h4 {
+  font-size: 22px;
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: 400;
 }
 
 /* separation of concerns */

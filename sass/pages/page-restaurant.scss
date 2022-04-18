@@ -7,21 +7,24 @@
     }
     & h2 {
     font-family: "Shrikhand", "sans-serif";
+    font-size: 36px;
+    font-weight: 400;
     }
     & h3 {
         text-transform: uppercase;
-        font-weight: 400;
+        font-weight: 300;
         position: relative;
         margin: 1.5rem 0 1.5rem;
+        font-size: 24px;
         &::after {
             content: "";
             height: 0.25rem;
             width: 1.25rem;
             background-color: var(--cyan);
             position: absolute;
-            top: 1.5rem;
+            top: 2rem;
             left: 0;
-            width: 3rem;
+            width: 3.8rem;
         }
     }
     header::before {
@@ -29,7 +32,7 @@
     content: "\f060";
     position: absolute;
     font-size: 20px;
-    left: 1rem;
+    left: 1.5rem;
     top: 50%;
     transform: translateY(-50%); /* align center */
     }
@@ -47,7 +50,7 @@
     margin: auto;
     background-color: #f6f6f6;
     position: relative;
-    margin-top: -6rem;
+    margin-top: -4rem;
     border-radius: 2rem 2rem 0 0;
 }
 
@@ -56,7 +59,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: 2rem 3rem 0 1rem;
 }
 
 .page-hearth {
@@ -114,6 +117,7 @@
     display: flex;
     align-items: flex-end;
     padding: 1rem;
+    font-size: 20px;
                 }
             }
         }
@@ -126,6 +130,12 @@
         white-space: nowrap; /* dont wrap text */
         text-overflow: ellipsis;
         overflow: hidden; /* hidding checkmark */
+    }
+    p {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 22px;
     }
 }
 
@@ -155,9 +165,15 @@
     height: 15vh; /* Viewport height */
     display: grid;
     place-items: center;
+    padding-bottom: 4rem;
 button {
-    @include mixin.button-gradient;
-    font-size: 22px;
+    @include mixin.button-commander;
     }
+}
+
+.footer-text h4 {
+    font-size: 22px;
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 400;
 }
 

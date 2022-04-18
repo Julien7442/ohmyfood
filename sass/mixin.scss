@@ -1,5 +1,5 @@
 @mixin box-shadow-main {
-    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 20%);
 }
 
 @mixin gradient-purple-pink {
@@ -17,14 +17,30 @@
 }
 
 @mixin button-gradient {
-    @include font-awesome-icon;
-    height: 45px;
-    border-radius: 20px;
-    width: 220px;
+    height: 55px;
+    border-radius: 30px;
+    width: 230px;
     @include gradient-purple-pink;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
+    border: 0; 
+    @include box-shadow-main;
+    cursor: pointer;
+&:hover {
+    transform: scale(1.03);
+    transition:all 400ms ease;
+    }  
+}
+
+@mixin button-commander {
+    height: 60px;
+    border-radius: 30px;
+    width: 230px;
+    @include gradient-purple-pink;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
     border: 0; 
     @include box-shadow-main;
     cursor: pointer;
