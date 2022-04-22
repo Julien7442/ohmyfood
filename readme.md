@@ -4,7 +4,7 @@
 
 ![screenshot of website](./screenshot.jpg)
 
-**Technology used :**
+## Technology used :
 
 -   HTML
 -   CSS
