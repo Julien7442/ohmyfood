@@ -1,29 +1,29 @@
 {
-  "name": "ohmyfood",
-  "version": "1.0.0",
-  "description": "P3 openclassrooms",
-  "main": "index.js",
-  "scripts": {
-    "sass": "sass --watch style.scss style.css",
-    "build": "postcss style.css -u autoprefixer cssnano -o ./build/style.minimize.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Julien7442/ohmyfood.git"
-  },
-  "author": "Julien Conforto",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Julien7442/ohmyfood/issues"
-  },
-  "homepage": "https://github.com/Julien7442/ohmyfood#readme",
-  "dependencies": {
-    "autoprefixer": "^10.4.4",
-    "sass": "^1.49.9"
-  },
-  "devDependencies": {
-    "cssnano": "^5.1.5",
-    "postcss": "^8.4.12",
-    "postcss-cli": "^9.1.0"
-  }
+    "name": "ohmyfood",
+    "version": "1.0.0",
+    "description": "P3 openclassrooms",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch style.scss style.css",
+        "build": "postcss"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Julien7442/ohmyfood.git"
+    },
+    "author": "Julien Conforto",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Julien7442/ohmyfood/issues"
+    },
+    "homepage": "https://github.com/Julien7442/ohmyfood#readme",
+    "dependencies": {
+        "autoprefixer": "^10.4.4",
+        "sass": "^1.49.9"
+    },
+    "devDependencies": {
+        "cssnano": "^5.1.5",
+        "postcss": "^8.4.12",
+        "postcss-cli": "^9.1.0"
+    }
 }
