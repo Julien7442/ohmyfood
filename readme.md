@@ -1,6 +1,6 @@
 # ohmyfood
 
-## A restaurant web page where you can chose your can customize your menu
+## A restaurant web page where you can chose your menu and customize it
 
 ![screenshot of website](./screenshot.jpg)
 
